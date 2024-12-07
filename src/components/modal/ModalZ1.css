@@ -1,0 +1,68 @@
+.modal-overlay {
+  color: #333;
+  margin-bottom: 16px;
+  font-size: clamp(18px, 4vw, 24px);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  min-width: 100vw;
+  position: absolute;
+}
+
+.modal-container {
+  background: white;
+  padding: clamp(20px, 4vw, 40px);
+  border-radius: 6px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: min(90%, 350px);
+  margin: 0 auto;
+  position: fixed;
+  top: 350px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: slideIn 0.3s forwards;
+  max-height: 600px !important;
+  overflow-y: auto;
+}
+
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border: none;
+  background: none;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 5px;
+  line-height: 1;
+}
+
+.modal-content {
+  margin-top: 20px;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-50%);
+    top: -100%;
+    opacity: 0;
+  }
+  to {
+    transform: translateX(-50%);
+    top: 100px;
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .modal-container {
+    padding: 15px;
+  }
+
+  .modal-close {
+    top: 5px;
+    right: 5px;
+    font-size: 20px;
+  }
+} 

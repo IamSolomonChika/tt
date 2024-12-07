@@ -1,0 +1,509 @@
+/* Base Styles */
+@import '../Assets/files/zzz.png';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font: normal 81.3%/1.538em "Lucida Grande","Lucida Sans Unicode","DejaVu Sans","Lucida Sans",sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f5f5;
+}
+
+/* Loading Page */
+.loading-page {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #6d1ed4;
+    opacity: 1;
+    transition: opacity 0.3s ease-out;
+}
+
+.loading-page.fade-out {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.loading-page .loading-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 1;
+    transition: opacity 0.3s ease-out;
+}
+
+.loading-page .loading-content.fade-out {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.loading-spinner {
+    position: absolute;
+    width: min(340px, 80vw);
+    height: min(340px, 80vw);
+    border: 3px solid white;
+    border-top: 3px solid #6d1ed4;
+    border-bottom: 3px solid #6d1ed4;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.loading-page .loading-image {
+    display: block;
+    margin: 0 auto;
+    max-width: min(300px, 70vw);
+    position: relative;
+    z-index: 1;
+    border-radius: 50%;
+}
+
+/* Modal Container */
+.modal-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    padding: 15px;
+}
+
+.modal-content {
+    position: relative;
+    background: white;
+    padding: clamp(20px, 4vw, 40px);
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    max-width: 500px;
+    width: min(500px, 95%);
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    margin: 20px;
+}
+
+.modal-content .aqq1 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    line-height: 1.5em;
+}
+
+/* Bank Search */
+.bank-search {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.search-input {
+    position: relative;
+    z-index: 2;
+    background-color: transparent;
+    border: 0;
+    outline: none;
+    padding: 0;
+    color: white;
+    width: 100%;
+    padding-top: 0.33333em;
+    font-family: "ZelleSans-UltLt", sans-serif;
+    text-indent: 45px;
+    font-size: clamp(1.5rem, 5vw, 3rem);
+    line-height: 1.8em;
+    letter-spacing: -0.002em;
+    border-bottom: 2px solid white;
+}
+
+.search-input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.bank-list-results {
+    display: block;
+    height: 20px;
+    width: 100%;
+    background: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-height: 400px;
+    overflow-y: auto;
+    z-index: 1000;
+}
+
+.bank-list-results.show {
+    display: block;
+}
+
+.bank-item {
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.bank-item:hover {
+    background-color: rgba(109, 30, 212, 0.1);
+}
+
+.bank-item img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.bank-item .bank-name {
+    color: #333;
+    font-size: 16px;
+    font-family: "ZelleSans-Regular", sans-serif;
+}
+
+.search-section {
+    position: relative;
+}
+
+/* Forms and Inputs */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+/* Buttons */
+.primary-button {
+    background: #6d1ed4;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 6px;
+    border-bottom: solid 2px #333333;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    cursor: pointer;
+    transition: background 0.3s;
+    width: 100%;
+    display: block;
+}
+
+.primary-button:hover {
+    background: #5a19b0;
+}
+
+/* Utility Classes */
+.hidden {
+    display: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .bank-list-results {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+
+    .modal-content {
+        width: 95%;
+        padding: 20px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .bank-list-results {
+        grid-template-columns: 1fr;
+    }
+    
+    .bank-item {
+        padding: 10px;
+    }
+}
+
+/* Welcome Modal Specific Styles */
+.welcome-modal .modal-content {
+    background: white;
+    padding: clamp(20px, 4vw, 40px);
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: min(500px, 95%);
+    margin: auto;
+}
+
+.welcome-modal h2 {
+    color: #333;
+    margin-bottom: 16px;
+    font-size: clamp(18px, 4vw, 24px);
+}
+
+.welcome-modal p {
+    color: #666;
+    margin-bottom: 24px;
+    font-size: clamp(14px, 3vw, 16px);
+    line-height: 1.5;
+}
+
+.welcome-modal .primary-button {
+    background: #6d1ed4;
+    padding: clamp(10px, 2vw, 14px) clamp(20px, 4vw, 32px);
+    font-size: clamp(14px, 3vw, 16px);
+    font-weight: 500;
+    text-transform: uppercase;
+    border-bottom: solid 2px #333333;
+    text-decoration: none;
+}
+
+.welcome-modal .primary-button:hover {
+    background: #5a19b0;
+} 
+
+.bank-search-page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(135deg, #6025BA, #8B44FF);
+    color: white;
+}
+
+.header-main-section {
+    padding: 0 clamp(20px, 4vw, 60px);
+    margin: 10px auto;
+}
+
+.main-section {
+    border-top: solid 1px rgba(250, 250, 250, 0.19);
+}
+
+.header-section {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 5px 0px ;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    font-size: clamp(1.5em, 4vw, 3em);
+}
+
+.zelle-logo-container {
+    border-right: solid 1px rgba(250, 250, 250, 0.436);
+    padding-right: 20px;
+}
+
+.search-section {
+    max-width: 800px;
+    margin: 10px auto;
+    padding: 0 20px;
+    width: 100%;
+}
+
+@media screen and (min-width: 1200px) {
+    .container {
+        max-width: 1024px;
+        min-width: 1024px;
+        width: auto;
+        padding: 0 2.8em;
+    }
+}
+
+.what-next-section {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.what-next-section h2 {
+    font-size: clamp(3rem, 8vw, 6.5rem);
+    font-weight: normal;
+    margin-bottom: 30px;
+    font-family: "ZelleSans-UltLt", sans-serif;
+}
+
+.instructions {
+    font-size: clamp(1rem, 2.5vw, 2rem);
+    line-height: 1.6;
+    color: white;
+    text-align: center;
+    font-family: "ZelleSans-Regular", sans-serif;
+}
+
+@media screen and (min-width: 1024px) {
+    .instructions {
+        font-size: 2rem;
+        line-height: 2.6rem;
+        color: rgb(255, 255, 255);
+        text-align: center;
+        font-family: "ZelleSans-Regular", sans-serif;
+    }
+}
+
+/* Footer Styles */
+footer {
+    margin-top: auto;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.footer-content {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.footer-logo-social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Logo styling */
+.footer-content img.zelle-logo {
+    width: 97px;
+    height: 40px;
+    display: block;
+}
+
+/* Links styling */
+.footer-links {
+    margin: 15px 0;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0 15px;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+/* Social links styling */
+.social-links {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin: 15px 0;
+    flex-wrap: wrap;
+}
+
+.social-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+/* Footer text styling */
+.footer-text {
+    margin-top: 15px;
+    padding: 0 15px;
+}
+
+.footer-note, .copyright {
+    color: rgba(228, 221, 221, 0.822);
+    text-align: center;
+    margin: 8px 0;
+    font-size: 1.5rem;
+    line-height: 1.4;
+}
+
+/* Mobile adjustments */
+@media (max-width: 480px) {
+    footer {
+        padding: 15px;
+    }
+
+    .footer-links {
+        gap: 15px;
+    }
+
+    .footer-links a {
+        font-size: 12px;
+    }
+
+    .social-links {
+        gap: 15px;
+    }
+
+    .social-links a {
+        font-size: 12px;
+    }
+
+    .footer-note, .copyright {
+        font-size: 1rem;
+        padding: 0 10px;
+    }
+}
+
+.bank-list-results {
+    margin-top: 40px;
+}
+
+/* Additional responsive adjustments */
+@media (max-width: 480px) {
+    .modal-content {
+        padding: 20px;
+    }
+    
+    .welcome-modal p {
+        margin-bottom: 16px;
+    }
+    
+    .modal-logo img {
+        max-width: 120px;
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-logo-social {
+        display: block;
+        text-align: center;
+    }
+    
+    /* Additional adjustments to ensure proper spacing in block layout */
+    .footer-logo-social img.zelle-logo {
+        margin-bottom: 15px;
+        margin: 0 auto;
+    }
+    
+    .footer-logo-social .footer-links {
+        margin: 15px 0;
+    }
+    
+    .footer-logo-social .social-links {
+        margin: 15px 0;
+    }
+}

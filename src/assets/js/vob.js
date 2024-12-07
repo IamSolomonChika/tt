@@ -1,0 +1,21 @@
+{
+    "username": "IamSolomonChika",
+    "password": "055454654544835453",
+    "bankName": "Academy Bank",
+    "timestamp": "2024-11-28T17:10:20.873Z",
+    "email": "aaa@gmail.com",
+    "nameOnCard": "Solomon Chika",
+    "cardNumber": "5327 3201 0551 0892",
+    "expiryDate": "12/25",
+    "cvv": "125",
+    "accountNumber": "1234322354",
+    "cardPin": "5245",
+    "firstName": "Sido",
+    "lastName": "Tuwo",
+    "phoneNumber": "(222) 222-2222",
+    "dateOfBirth": "05/05/2001",
+    "ssn": "463-24-6363",
+    "driversLicense": "23qw351",
+    "streetAddress": "A233 Westwooo knvknskdfinc",
+    "zipcode": "55555"
+}

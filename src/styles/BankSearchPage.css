@@ -1,0 +1,382 @@
+.bank-search-page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #6d1ed4;
+    color: white;
+    overflow-x: hidden;
+    width: 100vw;
+}
+
+.header-main-section {
+    padding: 20px 0;
+}
+
+.header-section {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 24px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.modal-content-title {
+    font-size: 20px;
+    font-weight: 500 !important;
+    font-family: "ZelleSans-Regular" !important;
+}
+
+.modal-bank-logo {
+    width: 50%;
+    height: 50%;
+    object-fit: contain;
+    max-width: 150px;
+    max-height: 100px;
+    margin: 0 auto;
+}
+
+.zelle-logo {
+    height: 32px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.main-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 60px;
+}
+
+.search-section {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.search-input {
+    width: 70rem !important;
+    max-width: 800px;
+    padding: 12px;
+    margin: 0 auto;
+    font-size: 28px;
+    border: none;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+    background: transparent;
+    color: white;
+    outline: none;
+    font-family: "ZelleSans-UltLt";
+}
+
+.search-input::placeholder {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.what-next-section {
+    text-align: center;
+    max-width: 800px;
+    padding: 40px 20px;
+    width: 100%;
+}
+
+.what-next-section h2 {
+    font-size: 48px;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
+.instructions {
+    font-size: 16px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.9);
+    padding: 0 30px;
+}
+
+footer {
+    margin-top: auto;
+    padding: 40px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%;
+}
+
+.footer-loggo-item {
+    display: grid !important; /* Use grid */
+    place-items: center !important; /* Centers horizontally and vertically */
+    height: 100%; /* Ensures it takes up the full height of its parent */
+}
+
+.footer-logo-social {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    width: 100%;
+    flex-direction: row;
+}
+
+.footer-logo-social .z { 
+    height: 32px;
+    max-width: 100%; /* Ensures the image fits within its container */
+    object-fit: contain; /* Scales the image properly */
+    display: block; /* Removes any inline alignment issues */
+}
+
+
+.footer-links {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.social-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 0;
+    width: 24px;
+    height: 24px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.social-links a.facebook {
+    background-image: url("data:image/svg+xml,%3Csvg fill='%23ffffff' width='64px' height='64px' viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg' stroke='%23ffffff'%3E%3Cg id='SVGRepo_bgCarrier' stroke-width='0'%3E%3C/g%3E%3Cg id='SVGRepo_tracerCarrier' stroke-linecap='round' stroke-linejoin='round'%3E%3C/g%3E%3Cg id='SVGRepo_iconCarrier'%3E%3Cpath d='M21.95 5.005l-3.306-.004c-3.206 0-5.277 2.124-5.277 5.415v2.495H10.05v4.515h3.317l-.004 9.575h4.641l.004-9.575h3.806l-.003-4.514h-3.803v-2.117c0-1.018.241-1.533 1.566-1.533l2.366-.001.01-4.256z'%3E%3C/path%3E%3C/g%3E%3C/svg%3E");
+    background-position: center;
+    background-size: contain;
+}
+
+.social-links a.twitter {
+    background-image: url("data:image/svg+xml,%3Csvg fill='%23ffffff' width='64px' height='44px' viewBox='0 0 1920 1920' xmlns='http://www.w3.org/2000/svg' stroke='%23ffffff'%3E%3Cg id='SVGRepo_bgCarrier' stroke-width='0'%3E%3C/g%3E%3Cg id='SVGRepo_tracerCarrier' stroke-linecap='round' stroke-linejoin='round'%3E%3C/g%3E%3Cg id='SVGRepo_iconCarrier'%3E%3Cpath d='M1920 311.856c-70.701 33.769-146.598 56.47-226.221 66.86 81.317-52.517 143.774-135.529 173.252-234.691-76.236 48.678-160.716 84.028-250.391 103.002-71.718-82.56-174.268-134.06-287.435-134.06-217.75 0-394.165 189.966-394.165 424.206 0 33.318 3.614 65.619 10.165 96.678C617.9 616.119 327.304 447.385 133.045 190.67c-33.77 62.57-53.309 135.53-53.309 213.233 0 147.162 91.031 276.818 196.744 353.054-64.602-2.26-157.101-21.46-157.101-53.309v5.648c0 205.327 114.41 376.658 294.55 415.849-32.978 9.487-78.38 14.795-114.409 14.795-25.412 0-55.454-2.71-79.624-7.793 50.26 168.509 193.13 291.163 365.478 294.777-134.852 113.506-306.07 181.383-490.616 181.383-31.85 0-64.038-2.033-94.758-5.873 174.494 120.17 381.176 190.532 603.67 190.532 724.97 0 1121.055-646.136 1121.055-1206.55 0-18.41-.452-36.932-1.356-55.116 77.026-59.746 143.887-134.4 196.631-219.444' fill-rule='evenodd'%3E%3C/path%3E%3C/g%3E%3C/svg%3E");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.social-links a.instagram {
+    background-image: url("data:image/svg+xml,%3Csvg fill='%23ffffff' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='64px' height='54px' viewBox='0 0 512 512' enable-background='new 0 0 512 512' xml:space='preserve' stroke='%23ffffff'%3E%3Cg id='SVGRepo_bgCarrier' stroke-width='0'%3E%3C/g%3E%3Cg id='SVGRepo_tracerCarrier' stroke-linecap='round' stroke-linejoin='round'%3E%3C/g%3E%3Cg id='SVGRepo_iconCarrier'%3E%3Cg id='5151e0c8492e5103c096af88a50059a5'%3E%3Cpath display='inline' fill-rule='evenodd' clip-rule='evenodd' d='M66.084,0.5h379.819c36.079,0,65.597,29.505,65.597,65.584v379.819c0,36.079-29.518,65.597-65.597,65.597H66.084C30.005,511.5,0.5,481.982,0.5,445.903V66.084C0.5,30.005,30.005,0.5,66.084,0.5L66.084,0.5z M372.734,57.264c-12.65,0-23.005,10.355-23.005,23.005v55.067c0,12.65,10.354,23.005,23.005,23.005h57.762c12.65,0,23.005-10.354,23.005-23.005V80.269c0-12.65-10.354-23.005-23.005-23.005H372.734L372.734,57.264z M453.738,216.59h-44.975c4.254,13.897,6.55,28.606,6.55,43.852c0,84.996-71.111,153.898-158.839,153.898c-87.716,0-158.827-68.902-158.827-153.898c0-15.245,2.295-29.954,6.55-43.852H57.276v215.853c0,11.178,9.132,20.322,20.311,20.322h355.841c11.166,0,20.311-9.145,20.311-20.322V216.59L453.738,216.59z M256.475,155.447c-56.677,0-102.625,44.525-102.625,99.443s45.948,99.443,102.625,99.443c56.688,0,102.636-44.525,102.636-99.443S313.163,155.447,256.475,155.447z'%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.social-links a.youtube {
+    background-image: url("data:image/svg+xml,%3Csvg fill='%23ffffff' height='64px' width='64px' version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='-271 311.2 256 179.8' xml:space='preserve' stroke='%23ffffff'%3E%3Cg id='SVGRepo_bgCarrier' stroke-width='0'%3E%3C/g%3E%3Cg id='SVGRepo_tracerCarrier' stroke-linecap='round' stroke-linejoin='round'%3E%3C/g%3E%3Cg id='SVGRepo_iconCarrier'%3E%3Cpath d='M-59.1,311.2h-167.8c0,0-44.1,0-44.1,44.1v91.5c0,0,0,44.1,44.1,44.1h167.8c0,0,44.1,0,44.1-44.1v-91.5 C-15,355.3-15,311.2-59.1,311.2z M-177.1,450.3v-98.5l83.8,49.3L-177.1,450.3z'%3E%3C/path%3E%3C/g%3E%3C/svg%3E");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.footer-text {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.5;
+    text-align: center;
+}
+
+.footer-note {
+    margin-bottom: 10px;
+}
+
+.bank-list-results {
+    background-color: white;
+    color: black;
+    font-family: "ZelleSans-Regular";
+}
+
+.bank-list-item {
+    padding: 6px 10px;
+    /* border-bottom: 1px solid rgba(0, 0, 0, 0.1); */
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.ags12BLI {
+    font-size: 1.5rem;
+    font-weight: 200 !important;
+}
+
+.modal-bodybs {
+    padding: 0;
+    max-height: 350px !important;
+}
+
+.modal-main-contentbs {
+    padding: 0;
+    max-height: 380px !important;
+}
+
+.modal-content-bs {
+    padding: 0;
+    max-width: 90%;
+    margin: 0 auto;
+    padding-bottom: 30px;
+    max-height: 500px !important;
+}
+
+.ags12 {
+    font-family: "ZelleSans-Regular";
+    font-size: 1rem;
+    font-weight: 400 !important;
+    text-align: center;
+    margin-bottom: 1rem !important;
+}
+
+.ags12b {
+    font-family: "ZelleSans-Regular";
+    font-size: 0.875rem;
+    font-weight: 400 !important;
+    text-align: center;
+    margin-bottom: 1rem !important;
+}
+
+@media screen and (max-width: 768px) {
+
+    .container {
+        padding: 0 15px;
+    }
+
+    .header-section {
+        font-size: 20px;
+        gap: 12px;
+    }
+
+    .zelle-logo {
+        height: 24px;
+    }
+
+    .what-next-section h2 {
+        font-size: 32px;
+    }
+
+    .search-input {
+        font-size: 16px;
+    }
+
+    .main-section {
+        padding-top: 30px;
+    }
+
+    .footer-logo-social {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+        width: 100%;
+    }
+
+    .footer-links {
+        display: flex;
+        flex-direction: row !important;
+        gap: 25px;
+        align-items: center;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .footer-links a {
+        text-align: center;
+    }
+
+    .social-links {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .footer-content {
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        padding: 0 8px;
+    }
+
+    .what-next-section {
+        padding: 30px 15px;
+    }
+
+    .what-next-section h2 {
+        font-size: 28px;
+    }
+
+    .instructions {
+        font-size: 14px;
+    }
+
+    .footer-links {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 10px 15px;
+    }
+
+    .footer-content {
+        padding: 0;
+    }
+
+    .search-input {
+        width: 80%;
+    }
+
+    .footer-text {
+        padding: 0 15px;
+    }
+
+    .footer-note {
+        font-size: 14px;
+    }
+
+    .copyright {
+        font-size: 12px;
+    }
+}
+
+.clear-search-button {
+    position: absolute;
+    right: calc((100% - 800px) / 2 + 12px);
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: rgba(255, 255, 255, 0.8);
+    cursor: pointer;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+}
+
+@media screen and (max-width: 800px) {
+    .clear-search-button {
+        right: 12px;
+    }
+}
+
+.clear-search-button:hover {
+    color: white;
+} 

@@ -1,0 +1,90 @@
+/* Loading Page */
+.loading-page {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #6d1ed4;
+    opacity: 1;
+    transition: opacity 0.3s ease-out;
+    margin: 0 auto;
+    width: 100vw;
+
+}
+
+.loading-page.fade-out {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.loading-page .loading-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+    transition: opacity 0.3s ease-out;
+    width: min(340px, 80vw);
+    height: min(340px, 80vw);
+}
+
+.loading-page .loading-content.fade-out {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.aqq1 {
+    font-family: "ZelleSans-UltLt" !important;
+    font-size: 24px;
+    font-weight: 500 !important;
+}
+
+.aqq2 {
+    font-family: "ZelleSans-Regular" !important;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.aqq3 {
+    text-align: center;
+    margin-top: 3rem !important;
+}
+
+.loading-spinner {
+    position: absolute;
+    width: 70%;
+    height: 70%;
+    border: 3px solid white;
+    border-top: 3px solid #6d1ed4;
+    border-bottom: 3px solid #6d1ed4;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    top: 15%;
+    left: 15%;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.loading-page .loading-image {
+    position: absolute;
+    width: 60%;
+    max-width: min(300px, 70vw);
+    z-index: 1;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.loading-modal-content {
+    text-align: center;
+}
+
+.loading-modal-content h2 {
+    color: black;
+}
